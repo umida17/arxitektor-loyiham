@@ -139,3 +139,106 @@ h1 span {
     cursor: pointer;
     box-shadow: 0 0 25px var(--primary-neon);
 }
+
+
+/* Input Bo'limi Uchun Maxsus Konteyner */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* Input Wrapper */
+.input-group {
+    position: relative;
+    width: 100%;
+}
+
+/* Asosiy Input Stili */
+.input-group input, 
+.input-group textarea {
+    width: 100%;
+    padding: 18px 20px;
+    background: rgba(255, 255, 255, 0.02); /* Juda shaffof fon */
+    border: 1px solid rgba(139, 92, 246, 0.2); /* Binafsha xira chegara */
+    border-radius: 15px;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    backdrop-filter: blur(5px);
+}
+
+/* Floating Label (Floating Text) */
+.input-group label {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.4);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    font-size: 15px;
+}
+
+/* Input Focus yoki To'la bo'lgandagi holat */
+.input-group input:focus,
+.input-group input:not(:placeholder-shown) {
+    border-color: #8b5cf6;
+    background: rgba(139, 92, 246, 0.05);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.2),
+                inset 0 0 10px rgba(139, 92, 246, 0.1);
+}
+
+/* Label tepaga chiqishi */
+.input-group input:focus ~ label,
+.input-group input:not(:placeholder-shown) ~ label {
+    top: -12px;
+    left: 15px;
+    font-size: 12px;
+    color: #8b5cf6;
+    background: #050810; /* Fon rangi bilan bir xil bo'lishi kerak */
+    padding: 0 8px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+/* Pastki chiziq animatsiyasi (Glow Line) */
+.input-group::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #8b5cf6, #d946ef, transparent);
+    transition: all 0.6s ease;
+    transform: translateX(-50%);
+}
+
+.input-group:focus-within::after {
+    width: 80%;
+}
+
+/* Yuborish tugmasi uchun maxsus effekt */
+.btn-submit {
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(45deg, #6366f1, #8b5cf6);
+    color: white;
+    padding: 18px;
+    border-radius: 15px;
+    border: none;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: 0.4s;
+}
+
+.btn-submit:hover {
+    box-shadow: 0 0 30px rgba(139, 92, 246, 0.6);
+    transform: translateY(-2px);
+}
