@@ -8,7 +8,45 @@
 </head>
 <body>
 
-    
+    <main class="dashboard">
+        <aside class="sidebar" aria-label="Asosiy menyu">
+            <nav>
+                <div class="logo">Smart<span>Home</span></div>
+                <ul class="nav-links">
+                    <li><a href="#" class="active" data-view="dashboard">Boshqaruv</a></li>
+                    <li><a href="#" data-view="devices">Qurilmalar</a></li>
+                    <li><a href="#" data-view="energy">Energiya</a></li>
+                </ul>
+            </nav>
+        </aside>
+
+        <section class="content">
+            <header class="top-bar">
+                <h1>Xush kelibsiz, Foydalanuvchi</h1>
+                <div class="status-indicators">
+                    <span id="current-temp">24°C</span>
+                    <span id="current-time">12:45</span>
+                </div>
+            </header>
+
+            <div class="grid-container">
+                <article class="card glass-effect" data-aos="fade-up">
+                    <h3>Yoritish</h3>
+                    <div class="toggle-switch">
+                        <input type="checkbox" id="light-switch">
+                        <label for="light-switch"></label>
+                    </div>
+                    <p class="status">Hozir: <span id="light-status">O'chiq</span></p>
+                </article>
+
+                <article class="card glass-effect">
+                    <h3>Harorat Nazorati</h3>
+                    <input type="range" min="16" max="30" value="22" class="slider" id="temp-slider">
+                    <p>Maqsad: <span id="temp-val">22</span>°C</p>
+                </article>
+            </div>
+        </section>
+    </main>
 
 
     <script src="./main.js"></script>
