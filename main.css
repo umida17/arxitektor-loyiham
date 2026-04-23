@@ -1,76 +1,141 @@
+/* 1. Global Sozlamalar */
 :root {
-    --bg: #3e3e3e;
-    --accent: #00ff88;
-    --white: #ffffff;
-    --gray: #888888;
-    --card: #141414;
-    --font-main: 'Inter', sans-serif;
-    --font-heading: 'Syne', sans-serif;
+    --bg-dark: #050810;
+    --primary-neon: #8b5cf6;
+    --secondary-neon: #d946ef;
+    --text-main: #e2e8f0;
+    --glass: rgba(255, 255, 255, 0.03);
+    --border-glass: rgba(255, 255, 255, 0.1);
+    --transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
 
-* { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
-html { scroll-behavior: smooth; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    background-color: var(--bg);
-    color: var(--white);
-    font-family: var(--font-main);
+    background-color: var(--bg-dark);
+    color: var(--text-main);
+    font-family: 'Space Grotesk', sans-serif;
     overflow-x: hidden;
 }
 
-.container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
-
-/* Custom Cursor */
-#cursor {
-    width: 8px; height: 8px; background: var(--accent);
-    position: fixed; border-radius: 50%; pointer-events: none; z-index: 10000;
-}
-#cursor-blur {
-    width: 40px; height: 40px; border: 1px solid var(--accent);
-    position: fixed; border-radius: 50%; pointer-events: none; z-index: 9999;
-    transition: transform 0.15s ease-out;
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 25px;
 }
 
-/* Navbar */
-.navbar { padding: 30px 0; position: fixed; width: 100%; top: 0; z-index: 1000; background: rgba(10,10,10,0.8); backdrop-filter: blur(10px); }
-.nav-container { display: flex; justify-content: space-between; align-items: center; }
-.logo { font-family: var(--font-heading); font-size: 28px; font-weight: 800; text-decoration: none; color: white; }
-.logo span { color: var(--accent); }
-.nav-link { text-decoration: none; color: var(--gray); margin-left: 40px; font-size: 14px; text-transform: uppercase; transition: 0.3s; }
-.nav-link:hover { color: var(--accent); }
+/* 2. Fon Effektlari (Dinamik nur) */
+.bg-glow {
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: radial-gradient(circle at 50% 50%, #1e1b4b 0%, #050810 100%);
+    z-index: -1;
+}
 
-/* Hero */
-.hero { height: 100vh; display: flex; align-items: center; position: relative; }
-h1 { font-family: var(--font-heading); font-size: 8vw; line-height: 0.9; text-transform: uppercase; }
-.outline { color: transparent; -webkit-text-stroke: 1px var(--white); opacity: 0.5; }
+/* 3. Navbar (Glassmorphism) */
+.navbar {
+    position: fixed;
+    top: 0; width: 100%; height: 80px;
+    display: flex;
+    align-items: center;
+    background: rgba(5, 8, 16, 0.8);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border-glass);
+    z-index: 1000;
+}
 
-/* Service Cards (Focus & Hover) */
-.services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; margin-top: 60px; }
-.service-card {
-    background: var(--card); padding: 50px; border-radius: 30px; 
-    transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1); border: 1px solid rgba(255,255,255,0.05);
-    position: relative; overflow: hidden;
+.nav-content {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
-.service-card:hover, .service-card:focus {
-    background: var(--accent); transform: translateY(-15px); outline: none;
-}
-.service-card:hover h3, .service-card:hover p, .service-card:hover .card-num { color: var(--bg); }
 
-/* Form Inputs (Professional Focus) */
-.field-box { position: relative; margin-bottom: 40px; flex: 1; }
-.field-box input {
-    width: 100%; background: none; border: none; border-bottom: 2px solid #333;
-    padding: 15px 0; color: white; font-size: 18px; transition: 0.3s;
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 2px;
 }
-.field-box label { position: absolute; left: 0; top: 15px; color: var(--gray); pointer-events: none; transition: 0.3s; }
-.field-box input:focus ~ label, .field-box input:not(:placeholder-shown) ~ label {
-    top: -20px; font-size: 12px; color: var(--accent);
-}
-.field-box input:focus { border-bottom-color: var(--accent); outline: none; }
 
-.submit-btn {
-    background: var(--accent); border: none; padding: 20px 60px;
-    border-radius: 50px; font-weight: 700; text-transform: uppercase;
-    transition: 0.4s; overflow: hidden; position: relative;
+.logo span { color: var(--primary-neon); }
+
+.nav-links {
+    display: flex;
+    gap: 40px;
+    list-style: none;
 }
-.submit-btn:hover { letter-spacing: 2px; box-shadow: 0 0 30px var(--accent); }
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    opacity: 0.7;
+    transition: var(--transition);
+}
+
+.nav-links a:hover {
+    opacity: 1;
+    color: var(--primary-neon);
+    text-shadow: 0 0 10px var(--primary-neon);
+}
+
+/* 4. Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.badge {
+    background: var(--glass);
+    border: 1px solid var(--primary-neon);
+    padding: 6px 16px;
+    border-radius: 50px;
+    font-size: 12px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+h1 span {
+    background: linear-gradient(90deg, var(--primary-neon), var(--secondary-neon));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 20px rgba(139, 92, 246, 0.3));
+}
+
+.hero p {
+    max-width: 600px;
+    font-size: 1.1rem;
+    opacity: 0.6;
+    margin-bottom: 40px;
+}
+
+/* 5. Tugmalar (Buttons) */
+.btn-primary {
+    background: var(--primary-neon);
+    color: white;
+    padding: 15px 35px;
+    border-radius: 12px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 0 25px var(--primary-neon);
+}
