@@ -1,5 +1,5 @@
 :root {
-    --bg: #0a0a0a;
+    --bg: #3e3e3e;
     --accent: #00ff88;
     --white: #ffffff;
     --gray: #888888;
@@ -18,7 +18,7 @@ body {
     overflow-x: hidden;
 }
 
-.container { max-width: 1300px; margin: 0 auto; padding: 0 30px; }
+.container { max-width: 1200px; margin: 0 auto; padding: 0 30px; }
 
 /* Custom Cursor */
 #cursor {
