@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI Vision | Next-Gen Platform</title>
+    <title>AI Vision Project</title>
     <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -16,64 +15,38 @@
             <div class="logo">AI<span>.VISION</span></div>
             <ul class="nav-links">
                 <li><a href="#features">Texnologiyalar</a></li>
-                <li><a href="#process">Jarayon</a></li>
-                <li><a href="#showcase">Loyiha</a></li>
                 <li><a href="#contact">Aloqa</a></li>
             </ul>
-            <button class="btn-glass">Kirish</button>
         </div>
     </nav>
 
-    <section class="hero">
-        <div class="container">
-            <div class="badge">AI v2.0 Endi Ochiq</div>
+    <div class="container">
+        <section class="hero">
             <h1>Intellektual <span>Kelajak</span> <br> Shu Yerdan Boshlanadi</h1>
-            <p>Bizning AI algoritmlarimiz biznesingizni yangi bosqichga olib chiqadi. Avtomatlashtirish, tahlil va natija.</p>
-            <div class="hero-btns">
-                <button class="btn-primary">Bepul Sinab Ko'ring</button>
-                <button class="btn-outline">Video Tanishuv</button>
-            </div>
-        </div>
-    </section>
+            <p>Bizning AI algoritmlarimiz biznesingizni yangi bosqichga olib chiqadi.</p>
+        </section>
 
-    <section id="features" class="features">
-        <div class="container grid-3">
-            <div class="f-card">
-                <div class="icon">🤖</div>
-                <h3>Neural Networks</h3>
-                <p>Inson miyasi kabi ishlovchi murakkab neyron tarmoqlar.</p>
-            </div>
-            <div class="f-card active">
-                <div class="icon">⚡</div>
-                <h3>Real-time Data</h3>
-                <p>Ma'lumotlarni soniyalar ichida qayta ishlash tizimi.</p>
-            </div>
-            <div class="f-card">
-                <div class="icon">🛡️</div>
-                <h3>Deep Security</h3>
-                <p>Kriptografik xavfsizlik va ma'lumotlar himoyasi.</p>
-            </div>
-        </div>
-    </section>
+        <section id="features" class="grid-3">
+            <div class="f-card"><h3>Neural Networks</h3><p>Murakkab neyron tarmoqlar.</p></div>
+            <div class="f-card"><h3>Real-time Data</h3><p>Sekundiga millionlab tahlillar.</p></div>
+            <div class="f-card"><h3>Deep Security</h3><p>Yuqori darajadagi xavfsizlik.</p></div>
+        </section>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-box">
-                <h2>Loyihangizni Muhokama Qilamiz</h2>
-                <form id="aiForm">
-                    <div class="input-wrapper">
-                        <input type="text" required placeholder="Ismingiz">
-                        <span class="focus-border"></span>
-                    </div>
-                    <div class="input-wrapper">
-                        <input type="email" required placeholder="Email manzilingiz">
-                        <span class="focus-border"></span>
-                    </div>
-                    <button type="submit" class="btn-submit">Suro'v Yuborish</button>
-                </form>
-            </div>
-        </div>
-    </section>
+        <section id="contact" class="contact-box">
+            <h2>Bog'lanish</h2>
+            <form id="aiForm" class="contact-form">
+                <div class="input-group">
+                    <input type="text" id="name" required placeholder=" ">
+                    <label for="name">Ismingiz</label>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="email" required placeholder=" ">
+                    <label for="email">Email manzilingiz</label>
+                </div>
+                <button type="submit" class="btn-submit">YUBORISH</button>
+            </form>
+        </section>
+    </div>
 
     <script src="main.js"></script>
 </body>
