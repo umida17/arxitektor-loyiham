@@ -1,72 +1,56 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Nexus Analytics | Professional Dashboard</title>
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
-    <script src="https://unpkg.com/lucide@latest"></script>
-    <link rel="stylesheet" href="style.css">
+    <title>Cosmos | Keyingi Manzil Mars</title>
+    <link rel="stylesheet" href="main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
 </head>
 <body>
 
-    <div class="app-container">
-        <aside class="sidebar">
-            <div class="sidebar-header">
-                <div class="logo-icon"></div>
-                <span class="logo-text">Nexus.ai</span>
+    <header class="navbar">
+        <div class="logo">COSMOS<span>.io</span></div>
+        <nav aria-label="Asosiy menyu">
+            <ul>
+                <li><a href="#home">Bosh sahifa</a></li>
+                <li><a href="#planets">Planetalar</a></li>
+                <li><a href="#booking">Chiptalar</a></li>
+            </ul>
+        </nav>
+        <button class="btn-primary">Sayohatni boshlash</button>
+    </header>
+
+    <main>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1 class="glitch" data-text="Koinotni Kashf Et">Koinotni Kashf Et</h1>
+                <p>Insoniyatning yangi davri boshlanmoqda. Biz bilan yulduzlararo sayohat qiling.</p>
+                <div class="stats">
+                    <div class="stat-item"><strong>4.8k</strong><span>Sayohatlar</span></div>
+                    <div class="stat-item"><strong>12</strong><span>Manzillar</span></div>
+                </div>
             </div>
-            <nav class="sidebar-nav">
-                <a href="#" class="nav-item active" data-lucide="layout-dashboard">Dashboard</a>
-                <a href="#" class="nav-item" data-lucide="bar-chart-3">Analytics</a>
-                <a href="#" class="nav-item" data-lucide="wallet">Payments</a>
-                <a href="#" class="nav-item" data-lucide="settings">Settings</a>
-            </nav>
-        </aside>
+            <div class="planet-container">
+                <div class="mars"></div>
+            </div>
+        </section>
 
-        <main class="main-content">
-            <header class="main-header">
-                <div class="search-bar">
-                    <i data-lucide="search"></i>
-                    <input type="text" placeholder="Qidiruv...">
-                </div>
-                <div class="user-profile">
-                    <div class="notifications" data-lucide="bell"></div>
-                    <img src="https://ui-avatars.com/api/?name=Umida+O&background=6366f1&color=fff" alt="User">
-                </div>
-            </header>
-
-            <section class="dashboard-grid">
-                <div class="stat-card" data-aos="fade-up">
-                    <span class="label">Umumiy Daromad</span>
-                    <div class="value-row">
-                        <h2 class="value">$45,285.00</h2>
-                        <span class="trend positive">+12.5%</span>
+        <section id="planets" class="grid-section">
+            <h2 class="section-title">Ommabop Manzillar</h2>
+            <div class="cards-wrapper">
+                <article class="planet-card">
+                    <img src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=400" alt="Mars">
+                    <div class="card-overlay">
+                        <h3>Mars - Qizil Dunyo</h3>
+                        <p>$250,000 dan boshlanadi</p>
+                        <button class="book-btn">Band qilish</button>
                     </div>
-                    <canvas id="miniChart1" width="100" height="40"></canvas>
-                </div>
-
-                <article class="main-chart-card glass">
-                    <div class="card-header">
-                        <h3>Sotuvlar Dinamikasi</h3>
-                        <select class="date-picker">
-                            <option>Oxirgi 7 kun</option>
-                            <option>Oxirgi 30 kun</option>
-                        </select>
-                    </div>
-                    <canvas id="mainAnalyticsChart"></canvas>
                 </article>
+                </div>
+        </section>
+    </main>
 
-                <aside class="recent-activity glass">
-                    <h3>Oxirgi Tranzaksiyalar</h3>
-                    <ul class="activity-list" id="activityList">
-                        </ul>
-                </aside>
-            </section>
-        </main>
-    </div>
-
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script src="main.js"></script>
 </body>
 </html>

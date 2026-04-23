@@ -1,54 +1,68 @@
-:root {
-    --primary-bg: #0f172a;
-    --card-bg: rgba(255, 255, 255, 0.05);
-    --accent-color: #38bdf8;
-    --text-color: #f8fafc;
+ :root {
+    --bg: #050505;
+    --neon-blue: #00f2ff;
+    --neon-pink: #ff00e5;
+    --text: #ffffff;
 }
 
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
 body {
-    background: var(--primary-bg);
-    color: var(--text-color);
+    background-color: var(--bg);
+    color: var(--text);
     font-family: 'Inter', sans-serif;
-    margin: 0;
     overflow-x: hidden;
 }
 
-.dashboard {
-    display: grid;
-    grid-template-columns: 250px 1fr;
-    min-height: 100vh;
+h1, h2, .logo { font-family: 'Orbitron', sans-serif; }
+
+/* Navbar */
+.navbar {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 20px 10%; background: rgba(255,255,255,0.03);
+    backdrop-filter: blur(10px); position: fixed; width: 100%; z-index: 100;
 }
 
-.glass-effect {
-    background: var(--card-bg);
-    background: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    border-radius: 1.5rem;
-    padding: 2rem;
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+.logo span { color: var(--neon-blue); text-shadow: 0 0 10px var(--neon-blue); }
+
+/* Hero Section */
+.hero {
+    height: 100vh; display: flex; align-items: center; padding: 0 10%;
+    background: radial-gradient(circle at 80% 20%, #1a1a1a 0%, #050505 100%);
 }
 
-.glass-effect:hover {
-    transform: translateY(-10px);
-    border-color: var(--accent-color);
+.hero-content { flex: 1; z-index: 2; }
+
+h1 { font-size: 4rem; line-height: 1.1; margin-bottom: 20px; }
+
+/* Mars Animatsiyasi */
+.planet-container { flex: 1; display: flex; justify-content: center; position: relative; }
+
+.mars {
+    width: 350px; height: 350px;
+    background: url('https://upload.wikimedia.org/wikipedia/commons/e/e3/Mars_3x2.jpg');
+    background-size: cover; border-radius: 50%;
+    box-shadow: inset -20px -20px 50px #000, 0 0 50px rgba(255, 69, 0, 0.4);
+    animation: rotate 20s linear infinite;
 }
 
-/* Responsive dizayn */
-@media (max-width: 768px) {
-    .dashboard {
-        grid-template-columns: 1fr;
-    }
-    .sidebar {
-        display: none; /* Mobile menu uchun alohida JS logic qo'shish mumkin */
-    }
+@keyframes rotate {
+    from { background-position: 0 0; }
+    to { background-position: 100% 0; }
 }
 
-/* Animatsiya */
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to { opacity: 1; transform: scale(1); }
+/* Planet Cards */
+.cards-wrapper { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; padding: 50px 10%; }
+
+.planet-card {
+    position: relative; border-radius: 20px; overflow: hidden;
+    cursor: pointer; transition: 0.5s; border: 1px solid rgba(255,255,255,0.1);
 }
 
-.card {
-    animation: fadeIn 0.6s ease-out forwards;
+.planet-card:hover { transform: scale(1.05); border-color: var(--neon-blue); }
+
+.card-overlay {
+    position: absolute; bottom: 0; padding: 20px;
+    background: linear-gradient(transparent, rgba(0,0,0,0.9));
+    width: 100%;
 }
