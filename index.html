@@ -1,56 +1,123 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="uz">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cosmos | Keyingi Manzil Mars</title>
+    <title>ZENITH | Digital Excellence</title>
     <link rel="stylesheet" href="main.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;700;800&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
 
-    <header class="navbar">
-        <div class="logo">COSMOS<span>.io</span></div>
-        <nav aria-label="Asosiy menyu">
-            <ul>
-                <li><a href="#home">Bosh sahifa</a></li>
-                <li><a href="#planets">Planetalar</a></li>
-                <li><a href="#booking">Chiptalar</a></li>
-            </ul>
-        </nav>
-        <button class="btn-primary">Sayohatni boshlash</button>
-    </header>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="#" class="logo">ZENITH<span>.</span></a>
+            <div class="nav-menu">
+                <a href="#services" class="nav-link">Xizmatlar</a>
+                <a href="#work" class="nav-link">Ishlarimiz</a>
+                <a href="#contact" class="nav-link contact-trigger">Loyiha boshlash</a>
+            </div>
+            <div class="menu-toggle">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+        </div>
+    </nav>
 
     <main>
-        <section id="home" class="hero">
-            <div class="hero-content">
-                <h1 class="glitch" data-text="Koinotni Kashf Et">Koinotni Kashf Et</h1>
-                <p>Insoniyatning yangi davri boshlanmoqda. Biz bilan yulduzlararo sayohat qiling.</p>
-                <div class="stats">
-                    <div class="stat-item"><strong>4.8k</strong><span>Sayohatlar</span></div>
-                    <div class="stat-item"><strong>12</strong><span>Manzillar</span></div>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-wrapper">
+                    <h1 class="reveal">Kelajakni <br> <span class="outline">Raqamlashtiramiz</span></h1>
+                    <p class="hero-sub fade-in">Biz kreativlik va texnologiya chorrahasida innovatsion yechimlar yaratamiz.</p>
+                    <div class="hero-btns fade-in">
+                        <button class="magnetic-btn">Bizning portfolio</button>
+                        <button class="play-btn"><span>▶</span> Ko'rish</button>
+                    </div>
                 </div>
             </div>
-            <div class="planet-container">
-                <div class="mars"></div>
+            <div class="hero-circle"></div>
+        </section>
+
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-header">
+                    <span class="tag">Nimalar qilamiz?</span>
+                    <h2>Eksklyuziv xizmatlarimiz</h2>
+                </div>
+                <div class="services-grid">
+                    <div class="service-card" tabindex="0">
+                        <div class="card-num">01</div>
+                        <h3>Web Development</h3>
+                        <p>High-end platformalar va murakkab ekotizimlar.</p>
+                        <div class="arrow">→</div>
+                    </div>
+                    <div class="service-card" tabindex="0">
+                        <div class="card-num Gemini-fix">02</div>
+                        <h3>UI/UX Design</h3>
+                        <p>Foydalanuvchi tajribasiga asoslangan vizual san'at.</p>
+                        <div class="arrow">→</div>
+                    </div>
+                    <div class="service-card" tabindex="0">
+                        <div class="card-num">03</div>
+                        <h3>AI Solutions</h3>
+                        <p>Sun'iy intellekt orqali biznesni avtomatlashtirish.</p>
+                        <div class="arrow">→</div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section id="planets" class="grid-section">
-            <h2 class="section-title">Ommabop Manzillar</h2>
-            <div class="cards-wrapper">
-                <article class="planet-card">
-                    <img src="https://images.unsplash.com/photo-1614728894747-a83421e2b9c9?auto=format&fit=crop&w=400" alt="Mars">
-                    <div class="card-overlay">
-                        <h3>Mars - Qizil Dunyo</h3>
-                        <p>$250,000 dan boshlanadi</p>
-                        <button class="book-btn">Band qilish</button>
-                    </div>
-                </article>
+        <section class="stats container">
+            <div class="stat-item">
+                <h2 class="counter" data-target="150">0</h2>
+                <p>Muvaffaqiyatli loyihalar</p>
+            </div>
+            <div class="stat-item">
+                <h2 class="counter" data-target="45">0</h2>
+                <p>Ekspertlarimiz</p>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="contact-box">
+                    <h2>G'oyangiz bormi?</h2>
+                    <form id="mainForm">
+                        <div class="input-row">
+                            <div class="field-box">
+                                <input type="text" id="name" required placeholder=" ">
+                                <label for="name">Ismingiz</label>
+                            </div>
+                            <div class="field-box">
+                                <input type="email" id="email" required placeholder=" ">
+                                <label for="email">Email manzilingiz</label>
+                            </div>
+                        </div>
+                        <button type="submit" class="submit-btn">Jo'natish <span class="circle"></span></button>
+                    </form>
                 </div>
+            </div>
         </section>
     </main>
 
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>© 2026 ZENITH. All Rights Reserved.</p>
+                <div class="socials">
+                    <a href="#">Instagram</a>
+                    <a href="#">LinkedIn</a>
+                    <a href="#">Dribbble</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
