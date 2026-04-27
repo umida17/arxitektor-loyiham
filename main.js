@@ -55,5 +55,4 @@ const animateSkills = () => {
     }
 };
 
-// Scroll hodisasini kuzatish
-window.addEventListener('scroll', animateSkills);
+ window.addEventListener('scroll', animateSkills);
