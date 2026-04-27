@@ -206,15 +206,14 @@ h1 span {
 
 .progress-line span {
     height: 100%;
-    width: 0; /* JS orqali to'ldiriladi */
+    width: 0;  
     background: linear-gradient(90deg, #00d2ff, #3a7bd5);
     position: absolute;
     border-radius: 10px;
     transition: 1.5s cubic-bezier(0.1, 0.42, 0.41, 1);
 }
 
-/* Testimonials Section */
-.reviews-container {
+ .reviews-container {
     display: flex;
     gap: 30px;
     flex-wrap: wrap;
@@ -271,4 +270,3 @@ h1 span {
      font-size: 0.8rem; 
      color: #777; 
     }
-    
