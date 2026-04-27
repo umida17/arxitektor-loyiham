@@ -38,8 +38,7 @@ if(form) {
 }
 
 
-// Skills animatsiyasi uchun funksiya
-const animateSkills = () => {
+ const animateSkills = () => {
     const skillsSection = document.querySelector('.skills-section');
     const progressLines = document.querySelectorAll('.progress-line span');
 
