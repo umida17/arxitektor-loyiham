@@ -38,3 +38,22 @@ if(form) {
 }
 
 
+// Skills animatsiyasi uchun funksiya
+const animateSkills = () => {
+    const skillsSection = document.querySelector('.skills-section');
+    const progressLines = document.querySelectorAll('.progress-line span');
+
+    const sectionPos = skillsSection.getBoundingClientRect().top;
+    const screenPos = window.innerHeight / 1.2;
+
+    if(sectionPos < screenPos) {
+        progressLines.forEach(line => {
+            const parent = line.parentElement;
+            const targetWidth = parent.getAttribute('data-percent');
+            line.style.width = targetWidth;
+        });
+    }
+};
+
+// Scroll hodisasini kuzatish
+window.addEventListener('scroll', animateSkills);
